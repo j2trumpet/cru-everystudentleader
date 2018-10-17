@@ -1,0 +1,10 @@
+@import 'info';
+@import 'variables';
+@import 'mixins';
+@import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700';
+@import 'main';
+@import 'header';
+@import 'footer';
+@import 'utilities';
+
+#cru-submenu, #cru-context-nav {display: none !important;}

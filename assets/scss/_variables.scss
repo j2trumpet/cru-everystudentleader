@@ -1,0 +1,40 @@
+//Colors
+$color-gold:    #f9b625;
+$color-orange:  #dd7d1b;
+$color-red:     #e46315;
+$color-silver:  #dddddd;
+$color-gray:    #777777;
+
+$color-white:   #ffffff;
+$color-black:   #000000;
+
+$color-logo-orange: #e37d0b;
+$color-logo-gray:   #8c8c8c;
+
+
+// Fonts
+$font-serif: 'PT Serif', serif;
+$font-sans: 'PT Sans', sans-serif;
+
+
+// Grid
+$grid-breakpoints: (
+  xs: 0,
+  sm: 356px,
+  md: 528px,
+  lg: 800px,
+  xl: 1084px
+) !default;
+
+
+// Content max-widths
+$content-max-widths: (
+  sm: 320px,
+  md: 480px,
+  lg: 768px,
+  xl: 1024px
+) !default;
+
+
+// Spacing
+$side-padding: 20px;

@@ -1,0 +1,235 @@
+/*
+Theme Name: Every Student Leader
+Author: Cru Design Engineering
+Author: URI: http://cru.org
+Description: Converting existing stylesheet into an AEM-usable file
+Version: 1.0
+*/
+@import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700';
+body {
+  background-color: #eee;
+  font-family: "PT Serif", serif;
+  font-size: 17px;
+  color: #000000; }
+
+#cru-header-nav, #search-overlay, .home-page, footer {
+  min-width: 318px;
+  max-width: calc(100% - 2px);
+  border: 1px solid #dddddd;
+  border-width: 0 1px 0;
+  margin: 0 auto;
+  box-sizing: border-box; }
+  @media (min-width: 356px) {
+    #cru-header-nav, #search-overlay, .home-page, footer {
+      max-width: 320px; } }
+  @media (min-width: 528px) {
+    #cru-header-nav, #search-overlay, .home-page, footer {
+      max-width: 480px; } }
+  @media (min-width: 800px) {
+    #cru-header-nav, #search-overlay, .home-page, footer {
+      max-width: 768px; } }
+  @media (min-width: 1084px) {
+    #cru-header-nav, #search-overlay, .home-page, footer {
+      max-width: 1024px; } }
+
+#cru-header-nav {
+  font-family: "PT Sans", sans-serif;
+  color: #777777;
+  /* .cru-row {
+    display: block;
+  } */
+  /* .cru-col-3, .cru-col-9 {
+    max-width: 100%;
+  } */ }
+  #cru-header-nav .cru-container {
+    width: 100%; }
+  #cru-header-nav .cru-col-3 {
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%; }
+  #cru-header-nav .cru-col-9 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%; }
+  #cru-header-nav .logo {
+    max-width: 305px; }
+  #cru-header-nav .language-picker {
+    display: none !important; }
+  #cru-header-nav .icon {
+    height: 42px;
+    color: #ffffff; }
+  @media (max-width: 1083.98px) {
+    #cru-header-nav {
+      font-size: 13px; } }
+  @media (max-width: 527.98px) {
+    #cru-header-nav .cru-col-3 {
+      -ms-flex: 0 0 82%;
+      flex: 0 0 82%;
+      max-width: 82%; }
+    #cru-header-nav .cru-col-9 {
+      -ms-flex: 0 0 18%;
+      flex: 0 0 18%;
+      max-width: 18%; }
+    #cru-header-nav .logo {
+      max-width: unset; }
+      #cru-header-nav .logo img {
+        max-width: unset;
+        height: 25px; } }
+  @media (max-width: 799.98px) {
+    #cru-header-nav .hidden-sm-up {
+      display: inline-block !important; } }
+  @media (min-width: 800px) {
+    #cru-header-nav .hidden-sm-up {
+      display: none !important; } }
+  @media (max-width: 799.98px) {
+    #cru-header-nav .visible-sm-up {
+      display: none !important; } }
+  @media (min-width: 800px) {
+    #cru-header-nav .visible-sm-up {
+      display: block !important; } }
+
+#cru-header {
+  border-width: 0;
+  padding-top: 14px;
+  padding-bottom: 14px; }
+  #cru-header .cru-container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px; }
+  #cru-header .cru-row {
+    margin-left: -20px;
+    margin-right: -20px; }
+  #cru-header .cru-col-3, #cru-header .cru-col-9 {
+    padding-left: 20px;
+    padding-right: 20px; }
+  @media (max-width: 527.98px) {
+    #cru-header .cru-col-3 {
+      padding-right: 0; } }
+  #cru-header .cru-col-9 .signin, #cru-header .cru-col-9 .language-link, #cru-header .cru-col-9 .nav-cart-icon {
+    display: none !important; }
+  #cru-header a:not(.logo), #cru-header .icon-menu i {
+    line-height: 32px; }
+  #cru-header .icon-menu i {
+    display: block; }
+  @media (min-width: 800px) {
+    #cru-header {
+      padding-top: 22px;
+      padding-bottom: 22px; } }
+  @media (max-width: 527.98px) {
+    #cru-header a:not(.logo), #cru-header .icon-menu i {
+      line-height: 25px;
+      padding-left: 0; } }
+
+#cru-nav {
+  background-color: #f9b625;
+  color: #ffffff;
+  border-width: 0; }
+  @media (min-width: 1084px) {
+    #cru-nav > div > ul {
+      text-align: center; } }
+  @media (min-width: 800px) {
+    #cru-nav li a, #cru-nav li:first-child a, #cru-nav li:last-child a {
+      padding-left: 5px;
+      padding-right: 5px; } }
+  @media (min-width: 1084px) {
+    #cru-nav li a, #cru-nav li:first-child a, #cru-nav li:last-child a {
+      padding-left: 15px;
+      padding-right: 15px; } }
+  #cru-nav a {
+    line-height: 42px !important;
+    color: #ffffff;
+    letter-spacing: 1px; }
+    #cru-nav a:hover, #cru-nav a.active {
+      color: #666666 !important; }
+  #cru-nav .icon-search {
+    right: 20px; }
+
+#cru-mobile-menu {
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: none;
+  border-top: #f9b625 1px solid; }
+  #cru-mobile-menu .first-level > li {
+    border-bottom: #f9b625 1px solid; }
+    #cru-mobile-menu .first-level > li > a {
+      padding-right: 0;
+      border-width: 0;
+      color: #777777;
+      font-weight: 700;
+      text-align: center;
+      font-size: 17px; }
+    #cru-mobile-menu .first-level > li:hover > a {
+      background-color: #ffffff; }
+  #cru-mobile-menu .mobile-menu-label {
+    line-height: 22px;
+    padding-top: 7px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 7px; }
+  #cru-mobile-menu .icon {
+    display: none; }
+
+#search-overlay {
+  top: 118px;
+  left: 50%;
+  transform: translateX(-50%); }
+
+footer {
+  background-color: #dd7d1b !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+  text-align: center; }
+  footer hr {
+    display: none; }
+  footer .container .row > div {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%; }
+    footer .container .row > div h6 {
+      display: none; }
+    footer .container .row > div ul {
+      text-align: center; }
+    footer .container .row > div li {
+      display: inline-block;
+      text-transform: uppercase; }
+    footer .container .row > div a {
+      display: inline-block;
+      padding-left: 6px;
+      padding-right: 6px;
+      font-weight: 700; }
+  footer .pb4 {
+    padding-bottom: 0; }
+  footer .mv3 {
+    margin-top: 0;
+    margin-bottom: 0; }
+  footer .d-flex {
+    display: block !important; }
+    footer .d-flex > div > span {
+      padding-left: 0; }
+    footer .d-flex img, footer .d-flex .tc {
+      display: none; }
+
+.sans-serif {
+  font-family: "PT Sans", sans-serif; }
+
+.cru-scorpion {
+  color: #777777; }
+
+@media (max-width: 799.98px) {
+  .hidden-sm-up {
+    display: inline-block !important; } }
+
+@media (min-width: 800px) {
+  .hidden-sm-up {
+    display: none !important; } }
+
+@media (max-width: 799.98px) {
+  .visible-sm-up {
+    display: none !important; } }
+
+@media (min-width: 800px) {
+  .visible-sm-up {
+    display: inline-block !important; } }
+
+#cru-submenu, #cru-context-nav {
+  display: none !important; }
