@@ -1,0 +1,14 @@
+// Typography
+// Copied from https://github.com/twbs/bootstrap/blob/v4-dev/scss/mixins/_text-emphasis.scss
+
+
+@mixin text-emphasis-variant($parent, $color) {
+  #{$parent} {
+    color: $color !important;
+  }
+  a#{$parent} {
+    @include hover-focus {
+      color: darken($color, 10%) !important;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+// Visibility
+// Adapted from Bootstrap 4.0.0-alpha.6
+
+@mixin hidden-sm-up($display: inline-block) {
+  @include media-breakpoint-down(md) {
+    display: $display !important;
+  }
+  @include media-breakpoint-up(lg) {
+    display: none !important;
+  }
+}
+
+@mixin visible-sm-up($display: inline-block) {
+  @include media-breakpoint-down(md) {
+    display: none !important;
+  }
+  @include media-breakpoint-up(lg) {
+    display: $display !important;
+  }
+}

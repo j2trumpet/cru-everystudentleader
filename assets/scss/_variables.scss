@@ -1,23 +1,38 @@
-//Colors
-$color-gold:    #f9b625;
-$color-orange:  #dd7d1b;
-$color-red:     #e46315;
-$color-silver:  #dddddd;
-$color-gray:    #777777;
-
-$color-white:   #ffffff;
-$color-black:   #000000;
-
-$color-logo-orange: #e37d0b;
-$color-logo-gray:   #8c8c8c;
+// Variables
 
 
-// Fonts
-$font-serif: 'PT Serif', serif;
-$font-sans: 'PT Sans', sans-serif;
+//
+// Color system
+//
+
+$logo-orange: #e37d0b !default;
+$logo-gray:   #8c8c8c !default;
+
+$white:       #fff !default;
+$gray-d:      #dddddd !default;
+$gray-e:      #eeeeee !default;
+$gray-6:      #666666 !default;
+$gray-7:      #777777 !default;
+$black:       #000 !default;
+
+$gold:        #f9b625 !default;
+$orange:      #dd7d1b !default;
+$red:         #e46315 !default;
+$blue:        #3eb1c8 !default;
+
+$colors: (
+  "gold":         $gold,
+  "orange":       $orange,
+  "red":          $red,
+  "blue":         $blue
+) !default;
 
 
-// Grid
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
 $grid-breakpoints: (
   xs: 0,
   sm: 356px,
@@ -27,8 +42,11 @@ $grid-breakpoints: (
 ) !default;
 
 
-// Content max-widths
-$content-max-widths: (
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
   sm: 320px,
   md: 480px,
   lg: 768px,
@@ -36,5 +54,16 @@ $content-max-widths: (
 ) !default;
 
 
-// Spacing
-$side-padding: 20px;
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-gutter-width: 20px !default;
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-serif:       'PT Serif', serif !default;
+$font-family-sans-serif:  'PT Sans', sans-serif !default;

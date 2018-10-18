@@ -1,32 +1,78 @@
+// Elements
+
 body {
-  background-color: #eee;
-  font-family: $font-serif;
+  background-color: $gray-e;
+  font-family: $font-family-serif;
   font-size: 17px;
-  color: $color-black;
+  color: $black;
+  &.sans-serif {
+    font-family: $font-family-serif;
+  }
+  &.cru-scorpion {
+    color: $black;
+  }
 }
 
-// h1, h2, h3, h4, h5, h6, p {
-//   &:first-child {
-//     margin-top: 0;
-//   }
-//   &:last-child {
-//     margin-bottom: 0;
-//   }
-// }
+h1, h2, h3, h4, h5, h6, p {
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
 
-// h1, h2, h3, h4, h5, h6 {
-//   font-family: $font-sans;
-// }
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+  color: $gray-7;
+}
 
-// h1 {
-//   color: $color-gray;
-// }
 
+// Grid
+
+.container {
+  width: 100%;
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+}
+
+.row {
+  margin-left: -$grid-gutter-width;
+  margin-right: -$grid-gutter-width;
+}
+
+.col, [class*="col-"] {
+  &:not([class*="pa"]) {
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+  }
+}
+
+
+// Content
 
 #cru-header-nav, #search-overlay, .home-page, footer {
   @include esl-wrapper;
 }
 
+.home-page {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: $white;
+}
+
+body > div > .aem-Grid {
+  margin: 0 auto;
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+  max-width: 2 * $grid-gutter-width + 700px;
+}
 
 
+// Misc.
 
+.heading-underline-yellow, .heading-underline-yellow-center {
+  &:after {
+    background-color: $gold;
+  }
+}

@@ -1,8 +1,9 @@
 footer {
-  background-color: $color-orange !important;
+  background-color: $logo-orange !important;
   padding-top: 12px !important;
   padding-bottom: 12px !important;
   text-align: center;
+  font-family: $font-family-sans-serif;
 
   hr {
     display: none;
@@ -12,6 +13,7 @@ footer {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
+    min-height: 0;
 
     h6 {
       display: none;
@@ -34,8 +36,12 @@ footer {
     }
   }
 
+  .pt3 {
+    padding-top: 0;
+  }
+
   .pb4 {
-    padding-bottom: 0;
+    padding-bottom: 15px;
   }
 
   .mv3 {
@@ -51,5 +57,9 @@ footer {
     img, .tc {
       display: none;
     }
+  }
+
+  span.dn {
+    display: block !important;
   }
 }

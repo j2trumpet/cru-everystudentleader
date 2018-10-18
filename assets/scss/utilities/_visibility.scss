@@ -1,0 +1,10 @@
+// Visibility
+
+
+.hidden-sm-up {
+  @include hidden-sm-up();
+}
+
+.visible-sm-up {
+  @include visible-sm-up();
+}

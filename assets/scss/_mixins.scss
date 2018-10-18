@@ -1,67 +1,25 @@
-@mixin hidden-sm-up($display: inline-block) {
-  @include media-breakpoint-down(md) {
-    display: $display !important;
-  }
-  @include media-breakpoint-up(lg) {
-    display: none !important;
-  }
-}
-
-@mixin visible-sm-up($display: inline-block) {
-  @include media-breakpoint-down(md) {
-    display: none !important;
-  }
-  @include media-breakpoint-up(lg) {
-    display: $display !important;
-  }
-}
+// Toggles
 
 
+// Utilities
+@import "mixins/breakpoints";
+@import "mixins/hover";
+@import "mixins/text-emphasis";
+@import "mixins/visibility";
+
+// // Layout
+@import "mixins/grid";
+
+
+// Cru mixins
+
+// Content wrappers inside body
 @mixin esl-wrapper {
   min-width: 318px;
   max-width: calc(100% - 2px);
-  border: 1px solid $color-silver;
+  border: 1px solid $gray-d;
   border-width: 0 1px 0;
   margin: 0 auto;
   box-sizing: border-box;
-  @include media-breakpoint-up(sm) { max-width: map-get($content-max-widths, sm); }
-  @include media-breakpoint-up(md) { max-width: map-get($content-max-widths, md); }
-  @include media-breakpoint-up(lg) { max-width: map-get($content-max-widths, lg); }
-  @include media-breakpoint-up(xl) { max-width: map-get($content-max-widths, xl); }
-}
-
-
-
-// Copied from https://github.com/twbs/bootstrap/blob/v4-dev/scss/mixins/_breakpoints.scss
-@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($name, $breakpoints);
-  @if $min {
-    @media (min-width: $min) {
-      @content;
-    }
-  } @else {
-    @content;
-  }
-}
-@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
-  $max: breakpoint-max($name, $breakpoints);
-  @if $max {
-    @media (max-width: $max) {
-      @content;
-    }
-  } @else {
-    @content;
-  }
-}
-@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
-  $min: map-get($breakpoints, $name);
-  @return if($min != 0, $min, null);
-}
-@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
-  $next: breakpoint-next($name, $breakpoints);
-  @return if($next, breakpoint-min($next, $breakpoints) - .02px, null);
-}
-@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
-  $n: index($breakpoint-names, $name);
-  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+  @include make-container-max-widths();
 }

@@ -1,18 +1,10 @@
 #cru-header-nav {
-  font-family: $font-sans;
-  color: $color-gray;
+  font-family: $font-family-sans-serif;
+  color: $gray-7;
 
   .cru-container {
     width: 100%;
   }
-
-  /* .cru-row {
-    display: block;
-  } */
-
-  /* .cru-col-3, .cru-col-9 {
-    max-width: 100%;
-  } */
 
   .cru-col-3 {
     -ms-flex: 0 0 75%;
@@ -36,7 +28,7 @@
 
   .icon {
     height: 42px;
-    color: $color-white;
+    color: $white;
   }
 
   @include media-breakpoint-down(lg) {
@@ -79,18 +71,18 @@
 
   .cru-container {
     width: 100%;
-    padding-left: $side-padding;
-    padding-right: $side-padding;
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
   }
 
   .cru-row {
-    margin-left: -$side-padding;
-    margin-right: -$side-padding;
+    margin-left: -$grid-gutter-width;
+    margin-right: -$grid-gutter-width;
   }
 
   .cru-col-3, .cru-col-9 {
-    padding-left: $side-padding;
-    padding-right: $side-padding;
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
   }
 
   .cru-col-3 {
@@ -127,8 +119,8 @@
 }
 
 #cru-nav {
-  background-color: $color-gold;
-  color: $color-white;
+  background-color: $gold;
+  color: $white;
   border-width: 0;
 
   > div > ul {
@@ -152,36 +144,36 @@
 
   a {
     line-height: 42px !important;
-    color: $color-white;
+    color: $white;
     letter-spacing: 1px;
     &:hover, &.active {
-      color: #666666 !important;
+      color: $gray-6 !important;
     }
   }
   .icon-search {
-    right: $side-padding;
+    right: $grid-gutter-width;
   }
 }
 
 #cru-mobile-menu {
   position: relative;
-  background-color: $color-white;
+  background-color: $white;
   box-shadow: none;
-  border-top: $color-gold 1px solid;
+  border-top: $gold 1px solid;
 
   .first-level {
     > li {
-      border-bottom: $color-gold 1px solid;
+      border-bottom: $gold 1px solid;
       > a {
         padding-right: 0;
         border-width: 0;
-        color: $color-gray;
+        color: $gray-7;
         font-weight: 700;
         text-align: center;
         font-size: 17px;
       }
       &:hover > a {
-        background-color: $color-white;
+        background-color: $white;
       }
     }
   }

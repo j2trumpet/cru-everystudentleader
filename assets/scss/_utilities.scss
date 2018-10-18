@@ -1,15 +1,5 @@
-.sans-serif {
-  font-family: $font-sans;
-}
+// Utilities
 
-.cru-scorpion {
-  color: $color-gray;
-}
 
-.hidden-sm-up {
-  @include hidden-sm-up();
-}
-
-.visible-sm-up {
-  @include visible-sm-up();
-}
+@import "utilities/text";
+@import "utilities/visibility";

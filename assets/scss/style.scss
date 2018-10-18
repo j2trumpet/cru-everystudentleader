@@ -1,10 +1,20 @@
-@import 'info';
+/*
+Theme Name: Every Student Leader
+Author: Cru Design Engineering
+Author: URI: http://cru.org
+Description: Converting existing stylesheet into an AEM-usable file
+Version: 1.0
+*/
+
+
+// Setup
 @import 'variables';
 @import 'mixins';
-@import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700';
-@import 'main';
-@import 'header';
-@import 'footer';
 @import 'utilities';
 
-#cru-submenu, #cru-context-nav {display: none !important;}
+// Content
+@import 'header';
+@import 'main';
+@import 'footer';
+
+body .home-page section.cover.bg-center {display: none !important;}
