@@ -101,6 +101,13 @@
     line-height: 32px;
   }
 
+  a.icon-menu {
+    color: $gray-6;
+    &:hover {
+      color: $gold;
+    }
+  }
+
   .icon-menu i {
     display: block;
   }
@@ -156,12 +163,16 @@
 }
 
 #cru-mobile-menu {
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
   position: relative;
   background-color: $white;
   box-shadow: none;
   border-top: $gold 1px solid;
 
   .first-level {
+    display: none;
     > li {
       border-bottom: $gold 1px solid;
       > a {
@@ -178,6 +189,10 @@
     }
   }
 
+  &.visible .first-level {
+    display: block;
+  }
+
   .mobile-menu-label {
     line-height: 22px;
     padding-top: 7px;
@@ -192,7 +207,10 @@
 }
 
 #search-overlay {
-  top: 118px;
+  top: 60px;
   left: 50%;
   transform: translateX(-50%);
+  @include media-breakpoint-up(lg) {
+    top: 118px;
+  }
 }
