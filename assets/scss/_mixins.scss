@@ -39,6 +39,7 @@
   display: block;
   height: 3px;
   background-color: $color;
-  width: 290px;
+  width: 100%;
+  max-width: 290px;
   margin-bottom: 36px;
 }

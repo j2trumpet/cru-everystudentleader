@@ -267,7 +267,15 @@ p {
     max-width: 100% !important;
   } */ }
   .aem-Grid h1 {
-    font-size: 40px; }
+    font-size: 32px; }
+    @media (min-width: 528px) {
+      .aem-Grid h1 {
+        font-size: 40px; } }
+  .aem-Grid h2 {
+    font-size: 24px; }
+    @media (min-width: 528px) {
+      .aem-Grid h2 {
+        font-size: 28px; } }
   .aem-Grid a {
     color: #dd7d1b;
     box-shadow: none !important;
@@ -288,10 +296,6 @@ p {
         @include hr-sep;
       }
     } */ }
-  .aem-Grid div.image, .aem-Grid div.media-embed {
-    margin-top: 36px; }
-    .aem-Grid div.image + div:not(.breadcrumb), .aem-Grid div.media-embed + div:not(.breadcrumb) {
-      margin-top: 36px; }
   .aem-Grid .image:first-child {
     padding-top: 0;
     padding-left: 0;
@@ -339,14 +343,16 @@ p {
     .aem-Grid .breadcrumb a:hover {
       color: #666666;
       text-decoration: underline; }
-  .aem-Grid .breadcrumb:first-child + div.image, .aem-Grid .breadcrumb:first-child + .experiencefragment div.image:first-child {
-    margin-top: 18px; }
-  .aem-Grid .breadcrumb + .title:after {
+  .aem-Grid .breadcrumb + .title:after,
+  .aem-Grid .breadcrumb + .image + .title:after,
+  .aem-Grid .breadcrumb + .experiencefragment > .xf-content-height > .aem-Grid > .title:first-child:after,
+  .aem-Grid .breadcrumb + .experiencefragment > .xf-content-height > .aem-Grid > .image:first-child + .title:after {
     content: '';
     display: block;
     height: 3px;
     background-color: #dd7d1b;
-    width: 290px;
+    width: 100%;
+    max-width: 290px;
     margin-bottom: 36px; }
   .aem-Grid .teaser h2, .aem-Grid .teaser h2 a {
     color: #555555; }
@@ -358,6 +364,10 @@ p {
   .aem-Grid .teaser h2 {
     font-size: 34px;
     margin-bottom: 0; }
+  .aem-Grid .text h2 {
+    margin-top: 36px;
+    margin-bottom: 24px;
+    text-transform: uppercase; }
   .aem-Grid .aem-Grid {
     border-width: 0;
     max-width: 100%; }
@@ -370,6 +380,15 @@ p {
       .aem-Grid .aem-Grid .image:first-child img {
         height: auto; }
 
+#cru-header-nav + .home-page > .aem-Grid > .experiencefragment > .xf-content-height > .aem-Grid div.image, #cru-header-nav + .home-page > .aem-Grid > .experiencefragment > .xf-content-height > .aem-Grid div.media-embed,
+#cru-header-nav + .aem-Grid div.image,
+#cru-header-nav + .aem-Grid div.media-embed {
+  margin-top: 36px; }
+  #cru-header-nav + .home-page > .aem-Grid > .experiencefragment > .xf-content-height > .aem-Grid div.image + div:not(.breadcrumb), #cru-header-nav + .home-page > .aem-Grid > .experiencefragment > .xf-content-height > .aem-Grid div.media-embed + div:not(.breadcrumb),
+  #cru-header-nav + .aem-Grid div.image + div:not(.breadcrumb),
+  #cru-header-nav + .aem-Grid div.media-embed + div:not(.breadcrumb) {
+    margin-top: 36px; }
+
 #cru-header-nav + .home-page > .aem-Grid > .experiencefragment > .xf-content-height > .aem-Grid > div:first-child,
 #cru-header-nav + .aem-Grid > div:first-child {
   margin-top: 0;
@@ -381,15 +400,14 @@ p {
 
 #cru-header-nav + .aem-Grid > div.image:first-child {
   padding-top: 0; }
+  #cru-header-nav + .aem-Grid > div.image:first-child + div.breadcrumb + div.image, #cru-header-nav + .aem-Grid > div.image:first-child + div.breadcrumb + .experiencefragment > .xf-content-height > .aem-Grid > div.image:first-child {
+    margin-top: 18px; }
 
 #cru-header-nav + .aem-Grid > div.breadcrumb:first-child {
   padding-top: 18px; }
+  #cru-header-nav + .aem-Grid > div.breadcrumb:first-child + .experiencefragment > .xf-content-height > .aem-Grid > div.image:first-child {
+    margin-top: 18px; }
 
-/* .heading-underline-yellow, .heading-underline-yellow-center {
-  &:after {
-    background-color: $gold;
-  }
-} */
 footer {
   background-color: #e37d0b !important;
   padding-top: 12px !important;

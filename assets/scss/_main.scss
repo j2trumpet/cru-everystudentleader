@@ -63,7 +63,16 @@ p {
 .aem-Grid {
   background-color: $white;
   h1 {
-    font-size: 40px;
+    font-size: 32px;
+    @include media-breakpoint-up(md) {
+      font-size: 40px;
+    }
+  }
+  h2 {
+    font-size: 24px;
+    @include media-breakpoint-up(md) {
+      font-size: 28px;
+    }
   }
   a {
     color: $orange;
@@ -96,12 +105,6 @@ p {
     padding: 0 !important;
     max-width: 100% !important;
   } */
-  div.image, div.media-embed {
-    margin-top: 36px;
-    + div:not(.breadcrumb) {
-      margin-top: 36px;
-    }
-  }
   .image {
     &:first-child {
       padding-top: 0;
@@ -138,7 +141,6 @@ p {
     }
   }
   .breadcrumb {
-    // margin-bottom: 18px;
     ol {
       margin: 0;
       padding: 0;
@@ -163,13 +165,10 @@ p {
         text-decoration: underline;
       }
     }
-    &:first-child {
-      //padding-top: 18px;
-      + div.image, + .experiencefragment div.image:first-child {
-        margin-top: 18px;
-      }
-    }
-    + .title:after {
+    + .title:after,
+    + .image + .title:after,
+    + .experiencefragment > .xf-content-height > .aem-Grid > .title:first-child:after,
+    + .experiencefragment > .xf-content-height > .aem-Grid > .image:first-child + .title:after {
       @include hr-sep;
     }
   }
@@ -195,6 +194,13 @@ p {
       // margin-top: 30px;
     }
   }
+  .text {
+    h2 {
+      margin-top: 36px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+  }
   .aem-Grid {
     border-width: 0;
     max-width: 100%;
@@ -208,9 +214,16 @@ p {
 }
 
 
+// Spacing between content components
 
 #cru-header-nav + .home-page > .aem-Grid > .experiencefragment > .xf-content-height > .aem-Grid,
 #cru-header-nav + .aem-Grid {
+  div.image, div.media-embed {
+    margin-top: 36px;
+    + div:not(.breadcrumb) {
+      margin-top: 36px;
+    }
+  }
   > div:first-child {
     margin-top: 0;
     padding-top: 40px;
@@ -223,18 +236,20 @@ p {
 #cru-header-nav + .aem-Grid {
   > div.image:first-child {
     padding-top: 0;
+    + div.breadcrumb {
+      + div.image, + .experiencefragment > .xf-content-height > .aem-Grid > div.image:first-child {
+        margin-top: 18px;
+      }
+    }
   }
   > div.breadcrumb:first-child {
     padding-top: 18px;
+    + .experiencefragment > .xf-content-height > .aem-Grid > div.image:first-child {
+      margin-top: 18px;
+    }
   }
 }
 
+#cru-header-nav + .aem-Grid > .experiencefragment > .xf-content-height > .aem-Grid {
 
-
-// Misc.
-
-/* .heading-underline-yellow, .heading-underline-yellow-center {
-  &:after {
-    background-color: $gold;
-  }
-} */
+}
