@@ -23,3 +23,22 @@
   box-sizing: border-box;
   @include make-container-max-widths();
 }
+
+// Inner content wrapper
+@mixin inner-content {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+  max-width: 2 * $grid-gutter-width + 700px;
+}
+
+// Horizontal line
+@mixin hr-sep( $color: $orange ) {
+  content: '';
+  display: block;
+  height: 3px;
+  background-color: $color;
+  width: 290px;
+  margin-bottom: 36px;
+}
