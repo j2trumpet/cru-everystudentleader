@@ -4,6 +4,7 @@
 
   .cru-container {
     width: 100%;
+    @include make-container-max-widths();
   }
 
   .cru-col-3 {
@@ -203,6 +204,20 @@
 
   .icon {
     display: none;
+  }
+}
+
+#cru-context-nav {
+  .breadcrumb, .first-level-inline {
+    li a {
+      &:hover, &.active {
+        color: $gold !important;
+      }
+    }
+  }
+  .cru-container {
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
   }
 }
 

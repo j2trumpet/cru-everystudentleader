@@ -64,13 +64,13 @@ p {
   background-color: $white;
   h1 {
     font-size: 32px;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       font-size: 40px;
     }
   }
   h2 {
     font-size: 24px;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       font-size: 28px;
     }
   }
@@ -86,25 +86,7 @@ p {
   > div:not(.experiencefragment) {
     margin-top: 18px;
     @include inner-content;
-    &:first-child {
-      // margin-top: 0;
-      //padding-top: 40px;
-    }
-    &:last-child {
-      //padding-bottom: 40px;
-    }
-    /* &:not(.image):not(.breadcrumb) + .title {
-      margin-top: 36px;
-      &:before {
-        @include hr-sep;
-      }
-    } */
   }
-  /* .experiencefragment {
-    margin: 0 !important;
-    padding: 0 !important;
-    max-width: 100% !important;
-  } */
   .image {
     &:first-child {
       padding-top: 0;
@@ -184,14 +166,46 @@ p {
       }
     }
     h2 {
-      font-size: 34px;
+      font-size: 26px;
       margin-bottom: 0;
+      @include media-breakpoint-up(lg) {
+        font-size: 34px;
+      }
+    }
+    .cmp-teaser:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+    .cmp-teaser__image {
+      margin-bottom: 12px;
+      a {
+        display: block;
+      }
+      /* + .cmp-teaser__title {
+        margin-top: 12px;
+      } */
+      @include media-breakpoint-up(lg) {
+        float: left;
+        width: 420px;
+        margin-right: $grid-gutter-width;
+        margin-bottom: 0;
+        + .cmp-teaser__title, + .cmp-teaser__title + .cmp-teaser__description {
+          padding-left: 440px;
+        }
+        /* + .cmp-teaser__title {
+          margin-top: 0;
+        } */
+      }
+    }
+    .cmp-teaser__title {
+      margin-top: 0;
     }
     .cmp-teaser__description {
-      // margin-top: 5px;
+      margin-top: 5px;
     }
     + .teaser {
-      // margin-top: 30px;
+      margin-top: 30px;
     }
   }
   .text {
@@ -248,8 +262,4 @@ p {
       margin-top: 18px;
     }
   }
-}
-
-#cru-header-nav + .aem-Grid > .experiencefragment > .xf-content-height > .aem-Grid {
-
 }

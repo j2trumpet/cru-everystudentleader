@@ -57,6 +57,18 @@ a.text-blue:hover, a.text-blue:focus {
   color: #777777; }
   #cru-header-nav .cru-container {
     width: 100%; }
+    @media (min-width: 356px) {
+      #cru-header-nav .cru-container {
+        max-width: 320px; } }
+    @media (min-width: 528px) {
+      #cru-header-nav .cru-container {
+        max-width: 480px; } }
+    @media (min-width: 800px) {
+      #cru-header-nav .cru-container {
+        max-width: 768px; } }
+    @media (min-width: 1084px) {
+      #cru-header-nav .cru-container {
+        max-width: 1024px; } }
   #cru-header-nav .cru-col-3 {
     -ms-flex: 0 0 75%;
     flex: 0 0 75%;
@@ -194,6 +206,13 @@ a.text-blue:hover, a.text-blue:focus {
   #cru-mobile-menu .icon {
     display: none; }
 
+#cru-context-nav .breadcrumb li a:hover, #cru-context-nav .breadcrumb li a.active, #cru-context-nav .first-level-inline li a:hover, #cru-context-nav .first-level-inline li a.active {
+  color: #f9b625 !important; }
+
+#cru-context-nav .cru-container {
+  padding-left: 20px;
+  padding-right: 20px; }
+
 #search-overlay {
   top: 60px;
   left: 50%;
@@ -260,20 +279,15 @@ p {
       max-width: 1024px; } }
 
 .aem-Grid {
-  background-color: #fff;
-  /* .experiencefragment {
-    margin: 0 !important;
-    padding: 0 !important;
-    max-width: 100% !important;
-  } */ }
+  background-color: #fff; }
   .aem-Grid h1 {
     font-size: 32px; }
-    @media (min-width: 528px) {
+    @media (min-width: 800px) {
       .aem-Grid h1 {
         font-size: 40px; } }
   .aem-Grid h2 {
     font-size: 24px; }
-    @media (min-width: 528px) {
+    @media (min-width: 800px) {
       .aem-Grid h2 {
         font-size: 28px; } }
   .aem-Grid a {
@@ -289,13 +303,7 @@ p {
     margin-right: auto;
     padding-left: 20px;
     padding-right: 20px;
-    max-width: 740px;
-    /* &:not(.image):not(.breadcrumb) + .title {
-      margin-top: 36px;
-      &:before {
-        @include hr-sep;
-      }
-    } */ }
+    max-width: 740px; }
   .aem-Grid .image:first-child {
     padding-top: 0;
     padding-left: 0;
@@ -362,8 +370,39 @@ p {
     .aem-Grid .teaser h2 a:hover {
       color: #dd7d1b; }
   .aem-Grid .teaser h2 {
-    font-size: 34px;
+    font-size: 26px;
     margin-bottom: 0; }
+    @media (min-width: 800px) {
+      .aem-Grid .teaser h2 {
+        font-size: 34px; } }
+  .aem-Grid .teaser .cmp-teaser:after {
+    display: block;
+    content: '';
+    clear: both; }
+  .aem-Grid .teaser .cmp-teaser__image {
+    margin-bottom: 12px;
+    /* + .cmp-teaser__title {
+        margin-top: 12px;
+      } */ }
+    .aem-Grid .teaser .cmp-teaser__image a {
+      display: block; }
+    @media (min-width: 800px) {
+      .aem-Grid .teaser .cmp-teaser__image {
+        float: left;
+        width: 420px;
+        margin-right: 20px;
+        margin-bottom: 0;
+        /* + .cmp-teaser__title {
+          margin-top: 0;
+        } */ }
+        .aem-Grid .teaser .cmp-teaser__image + .cmp-teaser__title, .aem-Grid .teaser .cmp-teaser__image + .cmp-teaser__title + .cmp-teaser__description {
+          padding-left: 440px; } }
+  .aem-Grid .teaser .cmp-teaser__title {
+    margin-top: 0; }
+  .aem-Grid .teaser .cmp-teaser__description {
+    margin-top: 5px; }
+  .aem-Grid .teaser + .teaser {
+    margin-top: 30px; }
   .aem-Grid .text h2 {
     margin-top: 36px;
     margin-bottom: 24px;
