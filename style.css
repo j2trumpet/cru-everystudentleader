@@ -213,6 +213,9 @@ a.text-blue:hover, a.text-blue:focus {
   padding-left: 20px;
   padding-right: 20px; }
 
+#cru-context-nav.fixed {
+  z-index: 1000; }
+
 #search-overlay {
   top: 60px;
   left: 50%;

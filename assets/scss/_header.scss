@@ -219,6 +219,9 @@
     padding-left: $grid-gutter-width;
     padding-right: $grid-gutter-width;
   }
+  &.fixed {
+    z-index: 1000;
+  }
 }
 
 #search-overlay {
